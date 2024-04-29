@@ -39,5 +39,17 @@
 	}
 	
 	function render() {
-	  
+	    renderBoard();
+
 	}
+
+	function renderBoard() {
+		board.forEach(function(colArr, colIdx) {
+		  // Iterate over the cells in the cur column (colArr)
+		  colArr.forEach(function(cellVal, rowIdx) {
+			const cellId = `c${colIdx}r${rowIdx}`;
+			const cellEl = document.getElementById(cellId);
+			cellEl.style.backgroundColor = COLORS[cellVal];
+		  });
+		});
+	  }
