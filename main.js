@@ -10,7 +10,9 @@
 	let winner;  // null = no winner; 1 or -1 = winner; 'T' = Tie
 
 	/*----- cached elements  -----*/
-
+	const messageEl = document.querySelector('h1');
+	const playAgainBtn = document.querySelector('button');
+	const markerEls = document.querySelectorAll('#markers > div');
 
 	/*----- event listeners -----*/
 
