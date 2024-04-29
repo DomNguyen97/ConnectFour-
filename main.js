@@ -1,6 +1,9 @@
 	/*----- constants -----*/
-
-
+	const COLORS = {
+		'0': 'white',
+		'1': 'purple',
+		'-1': 'orange',
+	  };
 	/*----- state variables -----*/
 	let board;  // array of 7 column arrays
 	let turn;  // 1 or -1
