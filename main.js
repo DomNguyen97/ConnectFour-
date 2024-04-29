@@ -40,6 +40,8 @@
 	
 	function render() {
 	    renderBoard();
+		renderMessage();
+  // Hide/show UI elements (controls)
 
 	}
 
@@ -52,4 +54,15 @@
 			cellEl.style.backgroundColor = COLORS[cellVal];
 		  });
 		});
+	  }
+
+	function renderMessage() {
+		if (winner === 'T') {
+		  messageEl.innerText = "It's a Tie!!!";
+		} else if (winner) {
+		  messageEl.innerHTML = `<span style="color: ${COLORS[winner]}">${COLORS[winner].toUpperCase()}</span> Wins!`;
+		} else {
+		  // Game is in play
+		  messageEl.innerHTML = `<span style="color: ${COLORS[turn]}">${COLORS[turn].toUpperCase()}</span>'s Turn`;
+		}
 	  }
